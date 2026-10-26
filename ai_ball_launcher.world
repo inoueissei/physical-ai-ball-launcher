@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.6">
+  <world name="default">
+    <gravity>0 0 -9.8</gravity>
+    <physics name="default_physics" type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>20 20</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>20 20</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.72 0.72 0.72 1</ambient>
+            <diffuse>0.72 0.72 0.72 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="ai_ball_launcher">
+      <static>true</static>
+      <link name="launcher_body">
+        <visual name="base_visual">
+          <pose>-1.55 -1.0625 0.15 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.80 0.75 0.30</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.05 0.20 0.65 1</ambient>
+            <diffuse>0.05 0.25 0.85 1</diffuse>
+          </material>
+        </visual>
+        <visual name="support_visual">
+          <pose>-1.55 -1.0625 0.80 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.28 0.36 1.30</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.04 0.16 0.52 1</ambient>
+            <diffuse>0.05 0.22 0.72 1</diffuse>
+          </material>
+        </visual>
+        <visual name="controller_visual">
+          <pose>-1.73 -1.0625 1.25 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.30 0.46 0.30</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.08 0.08 0.10 1</ambient>
+            <diffuse>0.12 0.12 0.16 1</diffuse>
+          </material>
+        </visual>
+        <visual name="barrel_visual">
+          <pose>-1.30 -1.0625 1.55 0 0.65 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.14</radius>
+              <length>1.10</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.75 0.22 0.02 1</ambient>
+            <diffuse>1.00 0.32 0.03 1</diffuse>
+          </material>
+        </visual>
+        <visual name="barrel_opening_visual">
+          <pose>-0.963 -1.0625 1.989 0 0.65 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.105</radius>
+              <length>0.015</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.01 0.01 0.01 1</ambient>
+            <diffuse>0.02 0.02 0.02 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="target_zone">
+      <static>true</static>
+      <pose>3.84514 0.34887 0 0 0 0</pose>
+      <link name="target_link">
+        <visual name="outer_target_visual">
+          <pose>0 0 0.012 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.65</radius>
+              <length>0.024</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.65 0.02 0.02 1</ambient>
+            <diffuse>0.95 0.03 0.03 1</diffuse>
+          </material>
+        </visual>
+        <visual name="success_zone_visual">
+          <pose>0 0 0.026 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.20</radius>
+              <length>0.028</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.01 0.60 0.05 1</ambient>
+            <diffuse>0.02 1.00 0.08 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="unit_sphere">
+      <pose>-0.951536 -1.06248 2.0 0 0 0</pose>
+      <static>false</static>
+      <link name="link">
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.1</ixx>
+            <iyy>0.1</iyy>
+            <izz>0.1</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.5</radius>
+            </sphere>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.5</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.92 0.92 0.92 1</ambient>
+            <diffuse>1.00 1.00 1.00 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>

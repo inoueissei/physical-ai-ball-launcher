@@ -1,0 +1,185 @@
+AI SMART BALL LAUNCHER
+Learning from failed attempts in Gazebo
+
+Target             : X=3.845, Y=0.349
+Learning rate      : 0.50
+Success radius     : 0.070 m
+Maximum trials     : 10
+Random seed        : 42
+Random initial force: Fx=23.8366 N, Fy=3.1000 N
+
+==========================================================
+TRIAL 1
+==========================================================
+Force       : Fx= 23.8366 N, Fy=  3.1000 N
+Target      : X =  3.8451 m, Y =  0.3489 m
+Landing     : X =  2.1877 m, Y = -0.6542 m
+Error       : Ex=  1.6574 m, Ey=  1.0031 m
+2D distance :   1.9373 m
+Result      : MISS
+
+AI recognized the failed attempt.
+
+Active learning rate: 0.50
+Correction   : dFx=+6.2899 N, dFy=+3.8111 N
+Next force   : Fx=30.1265 N, Fy=6.9111 N
+
+==========================================================
+TRIAL 2
+==========================================================
+Force       : Fx= 30.1265 N, Fy=  6.9111 N
+Target      : X =  3.8451 m, Y =  0.3489 m
+Landing     : X =  3.0161 m, Y = -0.1523 m
+Error       : Ex=  0.8290 m, Ey=  0.5012 m
+2D distance :   0.9687 m
+Result      : MISS
+
+AI recognized the failed attempt.
+
+Active learning rate: 0.50
+Correction   : dFx=+3.1461 N, dFy=+1.9041 N
+Next force   : Fx=33.2727 N, Fy=8.8152 N
+
+==========================================================
+TRIAL 3
+==========================================================
+Force       : Fx= 33.2727 N, Fy=  8.8152 N
+Target      : X =  3.8451 m, Y =  0.3489 m
+Landing     : X =  3.4305 m, Y =  0.0985 m
+Error       : Ex=  0.4147 m, Ey=  0.2504 m
+2D distance :   0.4844 m
+Result      : MISS
+
+AI recognized the failed attempt.
+
+Active learning rate: 0.50
+Correction   : dFx=+1.5737 N, dFy=+0.9513 N
+Next force   : Fx=34.8464 N, Fy=9.7665 N
+
+==========================================================
+TRIAL 4
+==========================================================
+Force       : Fx= 34.8464 N, Fy=  9.7665 N
+Target      : X =  3.8451 m, Y =  0.3489 m
+Landing     : X =  3.6377 m, Y =  0.2238 m
+Error       : Ex=  0.2074 m, Ey=  0.1251 m
+2D distance :   0.2422 m
+Result      : MISS
+
+AI recognized the failed attempt.
+
+Active learning rate: 0.50
+Correction   : dFx=+0.7871 N, dFy=+0.4753 N
+Next force   : Fx=35.6335 N, Fy=10.2418 N
+
+==========================================================
+TRIAL 5
+==========================================================
+Force       : Fx= 35.6335 N, Fy= 10.2418 N
+Target      : X =  3.8451 m, Y =  0.3489 m
+Landing     : X =  3.7414 m, Y =  0.2864 m
+Error       : Ex=  0.1037 m, Ey=  0.0625 m
+2D distance :   0.1211 m
+Result      : MISS
+
+AI recognized the failed attempt.
+
+Active learning rate: 0.50
+Correction   : dFx=+0.3937 N, dFy=+0.2375 N
+Next force   : Fx=36.0272 N, Fy=10.4793 N
+
+==========================================================
+TRIAL 6
+==========================================================
+Force       : Fx= 36.0272 N, Fy= 10.4793 N
+Target      : X =  3.8451 m, Y =  0.3489 m
+Landing     : X =  3.7933 m, Y =  0.3176 m
+Error       : Ex=  0.0519 m, Ey=  0.0312 m
+2D distance :   0.0606 m
+Result      : SUCCESS
+
+AI reached the target zone for the first time.
+Switching to precision mode.
+Consecutive successes: 1
+
+Active learning rate: 0.20
+Correction   : dFx=+0.0788 N, dFy=+0.0475 N
+Next force   : Fx=36.1060 N, Fy=10.5268 N
+
+==========================================================
+TRIAL 7
+==========================================================
+Force       : Fx= 36.1060 N, Fy= 10.5268 N
+Target      : X =  3.8451 m, Y =  0.3489 m
+Landing     : X =  3.8036 m, Y =  0.3239 m
+Error       : Ex=  0.0415 m, Ey=  0.0250 m
+2D distance :   0.0485 m
+Result      : SUCCESS
+
+AI maintained a successful throw.
+Consecutive successes: 2
+
+Active learning rate: 0.20
+Correction   : dFx=+0.0630 N, dFy=+0.0380 N
+Next force   : Fx=36.1690 N, Fy=10.5647 N
+
+==========================================================
+TRIAL 8
+==========================================================
+Force       : Fx= 36.1690 N, Fy= 10.5647 N
+Target      : X =  3.8451 m, Y =  0.3489 m
+Landing     : X =  3.8119 m, Y =  0.3289 m
+Error       : Ex=  0.0332 m, Ey=  0.0200 m
+2D distance :   0.0388 m
+Result      : SUCCESS
+
+AI maintained a successful throw.
+Consecutive successes: 3
+
+Active learning rate: 0.20
+Correction   : dFx=+0.0504 N, dFy=+0.0304 N
+Next force   : Fx=36.2195 N, Fy=10.5951 N
+
+==========================================================
+TRIAL 9
+==========================================================
+Force       : Fx= 36.2195 N, Fy= 10.5951 N
+Target      : X =  3.8451 m, Y =  0.3489 m
+Landing     : X =  3.8186 m, Y =  0.3329 m
+Error       : Ex=  0.0266 m, Ey=  0.0160 m
+2D distance :   0.0310 m
+Result      : SUCCESS
+
+AI maintained a successful throw.
+Consecutive successes: 4
+
+Active learning rate: 0.20
+Correction   : dFx=+0.0403 N, dFy=+0.0243 N
+Next force   : Fx=36.2598 N, Fy=10.6194 N
+
+==========================================================
+TRIAL 10
+==========================================================
+Force       : Fx= 36.2598 N, Fy= 10.6194 N
+Target      : X =  3.8451 m, Y =  0.3489 m
+Landing     : X =  3.8239 m, Y =  0.3361 m
+Error       : Ex=  0.0213 m, Ey=  0.0128 m
+2D distance :   0.0248 m
+Result      : SUCCESS
+
+AI maintained a successful throw.
+Consecutive successes: 5
+
+Active learning rate: 0.20
+Correction   : dFx=+0.0323 N, dFy=+0.0194 N
+All 10 throws have been completed.
+
+==========================================================
+LEARNING SUMMARY
+==========================================================
+Trials completed : 10
+Total successes  : 5
+First success    : 6
+Final result     : SUCCESS
+CSV saved to    : /home/ubuntu/tamain_ai/results/learning_results.csv
+The AI reached the target and maintained successful performance through the final trial.
